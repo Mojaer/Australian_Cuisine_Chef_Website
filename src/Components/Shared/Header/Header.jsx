@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
-        <div>
-            <Navbar bg="dark" expand="lg">
+        <div >
+            <Navbar bg="dark" expand="lg" variant="dark">
                 <Container>
                     <Navbar.Brand href="#"><img className='w-50' src="/Australian-cuisine-image.png" alt="" /></Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll" />
@@ -19,7 +19,10 @@ const Header = () => {
                             <Link className='btn text-light' to='/blogs'>Blogs</Link>
 
                         </Nav>
-                        <Link className='btn btn-light fw-bold' to='/account/login'>Login</Link>
+                        <div className='text-center'>
+                            <Link className='btn btn-light fw-bold ' to='/account/login'>Login</Link>
+                        </div>
+
 
                     </Navbar.Collapse>
                 </Container>

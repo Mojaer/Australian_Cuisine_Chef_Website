@@ -12,8 +12,6 @@ const Main = () => {
                 <Outlet></Outlet>
                 <Footer></Footer>
             </ChefProvider>
-
-
         </div>
     );
 };
