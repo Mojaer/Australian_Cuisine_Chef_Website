@@ -12,10 +12,10 @@ const Home = () => {
         <>
             <section className='banner'>
                 <div className='background'>
-                    <Container className='py-5 text-center'>
-                        <h2 className='fw-bolder mb-4 text-light'>Welcome to</h2>
-                        <img className='w-50' src="/Australian-cuisine-image-banner.png" alt="" />
-                        <h5 className='mt-3 mb-2 w-75 mx-auto text-light'>Lorem ipsum  elit. Necessitatibus praesentium corrupti nisi illum. Amet fugiat  et recusandae?</h5>
+                    <Container className='py-5 text-center '>
+                        <h2 className='fw-bolder mb-4 text-light font'>Welcome to</h2>
+                        <img className='w-50 mb-4' src="/Australian-cuisine-image-banner.png" alt="" />
+                        <h5 className='mt-4 mb-2 w-50 mx-auto text-light font'>Indulge in the diverse and delicious flavors of Australia's cuisine with our authentic dishes and recipes.</h5>
                     </Container>
                 </div>
             </section>

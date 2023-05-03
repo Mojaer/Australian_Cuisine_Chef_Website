@@ -1,7 +1,22 @@
 .card {
     height: 30rem;
+    overflow: hidden;
 }
 
 .chef_picture {
     height: 15rem;
+    width: 100%;
+    transition: 0.5s all ease-in-out;
+    margin-bottom: .5rem;
+
+
+}
+
+.card:hover .chef_picture {
+    transform: scale(1.1);
+
+}
+
+.card-body>h5 {
+    margin-bottom: 1rem;
 }

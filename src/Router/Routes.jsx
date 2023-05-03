@@ -5,8 +5,7 @@ import LoginPage from "../Components/AccountPages/LoginPage";
 import RegistrationPage from "../Components/AccountPages/RegistrationPage";
 import AccountMain from "../Components/AccountPages/AccountMain";
 import Home from "../Components/Pages/Home/Home";
-
-
+import ChefRecipes from "../Components/Pages/ChefRecipes/ChefRecipes";
 
 
 
@@ -18,6 +17,11 @@ export const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home></Home>,
+
+            },
+            {
+                path: "/chefs/recipe/:id",
+                element: <ChefRecipes></ChefRecipes>,
 
             },
             {
