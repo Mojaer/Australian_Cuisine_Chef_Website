@@ -1,0 +1,22 @@
+.chef-container>.chef_picture {
+    width: 40%;
+    border-radius: .8rem;
+}
+
+.chef-banner {
+    background-image: url('/Chef-banner.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.chef-background {
+    background-color: rgba(0, 0, 0, 0.582);
+}
+
+@media (max-width: 768px) {
+    .chef-container>.chef_picture {
+        width: 70%;
+    }
+
+}

@@ -1,14 +1,13 @@
 import React from 'react';
 import './ChefCards.css'
-import { Button, Card, CardGroup, Col, Container, Row } from 'react-bootstrap';
 import { FaClock, FaFireAlt, FaThumbsUp } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
-const ChefCards = ({ chefs }) => {
+const ChefCards = ({ chef }) => {
 
-    const { chef_name, chef_picture, likes, num_of_recipes, years_of_experience, id } = chefs
+    const { chef_name, chef_picture, likes, num_of_recipes, years_of_experience, id } = chef
 
-    console.log(id)
+    // console.log(id)
 
     return (
         <>
