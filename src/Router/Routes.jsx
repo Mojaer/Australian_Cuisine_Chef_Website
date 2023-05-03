@@ -1,4 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
+import Main from "../Components/Layout/Main";
+import Blog from "../Components/Layout/Blog";
+import LoginPage from "../Components/AccountPages/LoginPage";
+import RegistrationPage from "../Components/AccountPages/RegistrationPage";
+import AccountMain from "../Components/AccountPages/AccountMain";
 
 
 
@@ -7,6 +12,29 @@ import { createBrowserRouter } from "react-router-dom";
 export const router = createBrowserRouter([
     {
         path: "/",
-        element: <div>Hello world!</div>,
+        element: <Main></Main>,
+        children: [
+            {
+                path: "/blogs",
+                element: <Blog></Blog>,
+            }
+
+        ]
     },
+    {
+        path: "/account",
+        element: <AccountMain></AccountMain>,
+        children: [
+            {
+                path: "login",
+                element: <LoginPage></LoginPage>,
+            },
+            {
+                path: "register",
+                element: <RegistrationPage></RegistrationPage>,
+            },
+        ],
+    }
+
+
 ]);
