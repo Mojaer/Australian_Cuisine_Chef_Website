@@ -1,6 +1,7 @@
 .chef-container>.chef_picture {
     width: 40%;
     border-radius: .8rem;
+    border: 1px solid black;
 }
 
 .chef-banner {
