@@ -1,14 +1,46 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Button, Container, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { FaGithub, FaGoogle } from 'react-icons/fa'
+import { authContext } from '../../AuhProvider/AuthProvider';
 
 
 const LoginPage = () => {
+
+    const { login, loginWithGoogle, loginWithGithub, } = useContext(authContext)
+
+
+    const handleLogin = (event) => {
+        event.preventDefault();
+
+        const form = event.target
+        const email = form.email.value;
+        const password = form.password.value
+
+        login(email, password)
+            .catch(error => alert(error.message))
+
+    }
+
+    const handleGoogleLogin = () => {
+        loginWithGoogle()
+            .catch(error => alert(error.message))
+    }
+
+    const handleGithubLogin = () => {
+        loginWithGithub()
+            .catch(error => alert(error.message))
+    }
+
+
+
+
+
+
     return (
         <Container>
             <h3 className='text-center mt-4 fw-bold'>Please login</h3>
-            <Form className='w-50 mx-auto my-5'>
+            <Form className='w-50 mx-auto my-5' onSubmit={handleLogin}>
 
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
@@ -21,7 +53,7 @@ const LoginPage = () => {
                 </Form.Group>
 
                 <Button variant="success" type="submit" className='fw-bold'>
-                    Submit
+                    Login
                 </Button>
                 <Form.Group className="mb-3" >
                     <Form.Text className="text-muted">
@@ -29,8 +61,8 @@ const LoginPage = () => {
                     </Form.Text>
                 </Form.Group>
                 <div className='d-flex justify-content-start'>
-                    <Button variant="outline-primary" className='fw-bold'><FaGoogle></FaGoogle> Sign in with Google</Button>
-                    <Button variant="outline-dark" className='ms-4 fw-bold'><FaGithub></FaGithub> Sign in with GitHub</Button>
+                    <Button variant="outline-primary" className='fw-bold' onClick={handleGoogleLogin}><FaGoogle></FaGoogle> Sign in with Google</Button>
+                    <Button variant="outline-dark" className='ms-4 fw-bold' onClick={handleGithubLogin}><FaGithub></FaGithub> Sign in with GitHub</Button>
                 </div>
 
             </Form>

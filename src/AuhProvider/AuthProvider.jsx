@@ -2,7 +2,7 @@ import React, { createContext, useEffect, useState } from 'react';
 import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
 import app from '../Firebase/firebase.config';
 
-const authContext = createContext(null)
+export const authContext = createContext(null)
 
 const AuthProvider = ({ children }) => {
 
@@ -37,12 +37,12 @@ const AuthProvider = ({ children }) => {
     }
 
     //github login with github account
-    //client id 7decc7066d962addaf44
-    //secret cbc1376ec45a2c7934a07c9114f59b8ec68611de
+    //client id 620bb118a9e139e60d2f
+    //secret c013d8d5408aa7010d77811b3fb9964425c7f07b
 
     const gitProvider = new GithubAuthProvider();
     const loginWithGithub = () => {
-        return signInWithPopup(auth, provider)
+        return signInWithPopup(auth, gitProvider)
     }
 
 
