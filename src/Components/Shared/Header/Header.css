@@ -2,3 +2,7 @@
     background-color: red !important;
     color: black !important;
 }
+
+.user-image {
+    width: 2rem;
+}

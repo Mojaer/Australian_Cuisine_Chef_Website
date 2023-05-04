@@ -1,9 +1,21 @@
-import React from 'react';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import React, { useContext } from 'react';
+import { Container, Dropdown, Nav, Navbar, Spinner } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import './Header.css'
+import { authContext } from '../../../AuhProvider/AuthProvider';
 
 const Header = () => {
+
+    const { user } = useContext(authContext)
+
+    //Log out handler
+    const handleLogout = () => {
+        console.log('ops')
+        logOut()
+    }
+
+    // name tooltip after the image 
+
     return (
         <div >
             <Navbar bg="dark" expand="lg" variant="dark">
@@ -21,10 +33,23 @@ const Header = () => {
 
                         </Nav>
                         <div className='text-center'>
-                            <NavLink className='btn btn-light fw-bold ' to='/account/login'>Login</NavLink>
+                            {
+                                user ?
+                                    <div >
+                                        <Dropdown>
+                                            <Dropdown.Toggle variant="dark" id="dropdown-basic">
+                                                <img className='user-image rounded' title={user.displayName} src={user.photoURL} alt="" />
+                                            </Dropdown.Toggle>
+
+                                            <Dropdown.Menu>
+                                                <Dropdown.Item onClick={handleLogout}>Logout</Dropdown.Item>
+                                            </Dropdown.Menu>
+                                        </Dropdown>
+
+                                    </div> : <NavLink className='btn btn-light fw-bold ' to='/account/login'>Login</NavLink>
+                            }
+
                         </div>
-
-
                     </Navbar.Collapse>
                 </Container>
             </Navbar>

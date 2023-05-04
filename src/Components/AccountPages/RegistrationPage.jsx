@@ -17,10 +17,6 @@ const RegistrationPage = () => {
     }
     // console.log(null)
 
-
-
-
-
     const handleRegistration = (event) => {
         event.preventDefault();
 
@@ -55,13 +51,12 @@ const RegistrationPage = () => {
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Password</Form.Label>
                     <Form.Control type="password" name='password' placeholder="Password" required />
-                    <small className='text-danger'>{error} </small>
                 </Form.Group>
                 <Form.Group className="mb-3" >
                     <Form.Label>Photo URL</Form.Label>
                     <Form.Control type="text" name='url' placeholder="Enter your photo Url" />
                 </Form.Group>
-
+                <small className='text-danger'>{error} </small>
                 <Button variant="success" type="submit" className='fw-bold'>
                     Submit
                 </Button>

@@ -45,9 +45,9 @@ const LoginPage = () => {
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Password</Form.Label>
                     <Form.Control type="password" name='password' placeholder="Password" required />
-                    <small className='text-danger'>{error}</small>
-                </Form.Group>
 
+                </Form.Group>
+                <small className='text-danger'>{error}</small>
                 <Button variant="success" type="submit" className='fw-bold'>
                     Login
                 </Button>
