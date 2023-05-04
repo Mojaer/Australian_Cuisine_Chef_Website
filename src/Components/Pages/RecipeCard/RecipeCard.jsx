@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button, Card } from 'react-bootstrap';
 import './RecipeCard.css'
 import { Rating } from '@smastrom/react-rating';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const RecipeCard = ({ recipe }) => {
 
-    console.log(recipe)
+    // console.log(recipe)
+
+    //spinner fot the loading
     if (!recipe) {
         return (
             <div className='text-center'>
@@ -18,6 +23,14 @@ const RecipeCard = ({ recipe }) => {
     }
 
     const { recipe_name, ingredients, rating, recipe_photo, cooking_method } = recipe
+
+    //Favorite option to add 
+    const [favorite, setFavorite] = useState(false)
+    const notify = () => toast(`${recipe_name} is added to favorites list`);
+    const handleFavorite = () => {
+        setFavorite(true)
+        notify()
+    }
 
 
     return (
@@ -56,8 +69,18 @@ const RecipeCard = ({ recipe }) => {
                     </Card.Text>
                 </Card.Body>
 
-                <Button variant='success' >Favorite button</Button>
-
+                <Button variant='success' onClick={handleFavorite} disabled={favorite}>Favorite button</Button>
+                <ToastContainer
+                    position="top-right"
+                    autoClose={1700}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                    theme="colored" />
             </Card>
         </>
     );

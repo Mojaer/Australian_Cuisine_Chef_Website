@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Button, Container, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { FaGithub, FaGoogle } from 'react-icons/fa'
@@ -7,8 +7,8 @@ import { authContext } from '../../AuhProvider/AuthProvider';
 
 const LoginPage = () => {
 
-    const { login, loginWithGoogle, loginWithGithub, } = useContext(authContext)
-
+    const { login, loginWithGoogle, loginWithGithub } = useContext(authContext)
+    const [error, setError] = useState('')
 
     const handleLogin = (event) => {
         event.preventDefault();
@@ -18,7 +18,7 @@ const LoginPage = () => {
         const password = form.password.value
 
         login(email, password)
-            .catch(error => alert(error.message))
+            .catch(error => setError(error.message))
 
     }
 
@@ -31,11 +31,6 @@ const LoginPage = () => {
         loginWithGithub()
             .catch(error => alert(error.message))
     }
-
-
-
-
-
 
     return (
         <Container>
@@ -50,6 +45,7 @@ const LoginPage = () => {
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Password</Form.Label>
                     <Form.Control type="password" name='password' placeholder="Password" required />
+                    <small className='text-danger'>{error}</small>
                 </Form.Group>
 
                 <Button variant="success" type="submit" className='fw-bold'>
