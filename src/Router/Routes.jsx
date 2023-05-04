@@ -45,7 +45,15 @@ export const router = createBrowserRouter([
                 element: <RegistrationPage></RegistrationPage>,
             },
         ],
+    },
+    {
+        path: "*",
+        element:
+            <div className="text-center">
+                <h3 className="mt-2 text-danger fw-bolder">Error Occurred</h3>
+                <h3 className="mt-2 text-danger fw-bolder">404 Not Found!</h3>
+                <img src="/404.jpg" alt="" />
+            </div>,
     }
-
 
 ]);

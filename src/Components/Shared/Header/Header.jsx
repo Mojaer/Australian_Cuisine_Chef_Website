@@ -1,6 +1,7 @@
 import React from 'react';
-import { Button, Container, Nav, Navbar } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Container, Nav, Navbar } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
+import './Header.css'
 
 const Header = () => {
     return (
@@ -15,12 +16,12 @@ const Header = () => {
                             style={{ maxHeight: '100px' }}
                             navbarScroll
                         >
-                            <Link className='btn text-light' to='/'>Home</Link>
-                            <Link className='btn text-light' to='/blogs'>Blogs</Link>
+                            <NavLink className='btn text-light' to='/'>Home</NavLink>
+                            <NavLink className='btn text-light ms-2' to='/blogs'>Blogs</NavLink>
 
                         </Nav>
                         <div className='text-center'>
-                            <Link className='btn btn-light fw-bold ' to='/account/login'>Login</Link>
+                            <NavLink className='btn btn-light fw-bold ' to='/account/login'>Login</NavLink>
                         </div>
 
 
