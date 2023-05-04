@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { Link, createBrowserRouter } from "react-router-dom";
 import Main from "../Components/Layout/Main";
 import Blog from "../Components/Layout/Blog";
 import LoginPage from "../Components/AccountPages/LoginPage";
@@ -52,6 +52,7 @@ export const router = createBrowserRouter([
             <div className="text-center">
                 <h3 className="mt-2 text-danger fw-bolder">Error Occurred</h3>
                 <h3 className="mt-2 text-danger fw-bolder">404 Not Found!</h3>
+                <Link className="btn btn-light" to='/'> Go back to homepage</Link><br />
                 <img src="/404.jpg" alt="" />
             </div>,
     }
