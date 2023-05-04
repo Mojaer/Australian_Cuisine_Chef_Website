@@ -6,3 +6,7 @@
 .user-image {
     width: 2rem;
 }
+
+.dropdownItem {
+    padding: none;
+}

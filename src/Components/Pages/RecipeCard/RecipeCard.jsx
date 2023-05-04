@@ -45,7 +45,7 @@ const RecipeCard = ({ recipe }) => {
                         {
                             <ol >
                                 {
-                                    ingredients.map(i => <li >{i}</li>)
+                                    ingredients.map(i => <li kry={i} >{i}</li>)
                                 }
                             </ol>
                         }

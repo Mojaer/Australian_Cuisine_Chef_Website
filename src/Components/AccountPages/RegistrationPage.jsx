@@ -26,11 +26,21 @@ const RegistrationPage = () => {
         const name = form.name.value
         const url = form.url.value
         // console.log(name, url)
-        register(email, password)
-            .catch(error => setError(error.message))
 
-        updateUser(name, url, email)
-        // .catch(alert => alert(alert.message))
+        if (password.length < 6) {
+            setError('insert more than 6 characters')
+        }
+
+        else {
+            register(email, password)
+                .catch(error => setError(error.message))
+            updateUser(name, url, email)
+            // .catch(alert => alert(alert.message))
+
+        }
+
+
+
 
     }
 
@@ -51,12 +61,13 @@ const RegistrationPage = () => {
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Password</Form.Label>
                     <Form.Control type="password" name='password' placeholder="Password" required />
+                    <small className='text-danger'>{error} </small>
                 </Form.Group>
                 <Form.Group className="mb-3" >
                     <Form.Label>Photo URL</Form.Label>
                     <Form.Control type="text" name='url' placeholder="Enter your photo Url" />
                 </Form.Group>
-                <small className='text-danger'>{error} </small>
+
                 <Button variant="success" type="submit" className='fw-bold'>
                     Submit
                 </Button>

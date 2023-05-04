@@ -3,6 +3,9 @@ import { chefsContext } from '../../../ChefProvider/ChefProvider';
 import { Container } from 'react-bootstrap';
 import './Home.css'
 import ChefCards from '../ChefCards/ChefCards';
+import Extracomponents2 from '../../../ExtraComponents/Extracomponents2/Extracomponents2';
+import AwardWinning from '../../../ExtraComponents/ExtraComponents1/AwardWinning';
+
 
 const Home = () => {
     const chefs = useContext(chefsContext)
@@ -18,6 +21,7 @@ const Home = () => {
     // console.log(chefs)
     return (
         <>
+
             <section className='banner'>
                 <div className='background'>
                     <Container className='py-5 text-center '>
@@ -26,6 +30,9 @@ const Home = () => {
                         <h5 className='mt-4 mb-2 w-50 mx-auto text-light font'>Indulge in the diverse and delicious flavors of Australia's cuisine with our authentic dishes and recipes.</h5>
                     </Container>
                 </div>
+            </section>
+            <section>
+                <AwardWinning></AwardWinning>
             </section>
             <section>
                 <Container className=' my-5'>
@@ -39,6 +46,12 @@ const Home = () => {
                     </div>
                 </Container>
             </section>
+            <section>
+                <Extracomponents2>
+
+                </Extracomponents2>
+            </section>
+
         </>
 
 
