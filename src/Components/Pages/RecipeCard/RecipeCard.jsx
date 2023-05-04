@@ -4,6 +4,7 @@ import './RecipeCard.css'
 import { Rating } from '@smastrom/react-rating';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import LazyLoad from 'react-lazy-load';
 
 
 const RecipeCard = ({ recipe }) => {
@@ -36,16 +37,17 @@ const RecipeCard = ({ recipe }) => {
     return (
         <>
             <Card className='recipe_card'>
-                <Card.Img variant="top" src={recipe_photo} className='recipe_photo' />
-                <Card.Body>
+                <LazyLoad height={762}>
+                    <Card.Img variant="top" src={recipe_photo} className='recipe_photo' />
+                </LazyLoad>
+                <Card.Body >
                     <Card.Title className='fw-bold'>{recipe_name}</Card.Title>
-
                     <Card.Text>
                         <strong>Ingredients : </strong>
                         {
                             <ol >
                                 {
-                                    ingredients.map(i => <li kry={i} >{i}</li>)
+                                    ingredients.map(i => <li key={i} >{i}</li>)
                                 }
                             </ol>
                         }

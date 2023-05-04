@@ -19,4 +19,26 @@
 .award {
     background-color: #0E1317;
     padding: 2rem;
+    padding-bottom: 4rem;
+    transform: translate(0rem, -5rem);
+    transition: transform 2s;
+    width: 50%;
+}
+
+.trophy {
+    text-align: center;
+    color: goldenrod;
+    font-size: 10rem;
+    transform: rotateX(360);
+
+    transition: transform 10s
+}
+
+@media (max-width: 768px) {
+    .award {
+        transform: translate(0rem, 0rem);
+        width: 100%;
+
+    }
+
 }

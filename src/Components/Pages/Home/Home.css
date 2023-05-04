@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap');
 
 .banner {
-    background-color: rgb(167, 71, 71);
+    background-image: url('banner.jpg');
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;

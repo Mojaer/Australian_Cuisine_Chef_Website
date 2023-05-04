@@ -31,9 +31,7 @@ const Home = () => {
                     </Container>
                 </div>
             </section>
-            <section>
-                <AwardWinning></AwardWinning>
-            </section>
+
             <section>
                 <Container className=' my-5'>
                     <h4 className='fw-bold text-center'>We Have Experienced Chefs</h4>
@@ -50,6 +48,9 @@ const Home = () => {
                 <Extracomponents2>
 
                 </Extracomponents2>
+            </section>
+            <section>
+                <AwardWinning></AwardWinning>
             </section>
 
         </>

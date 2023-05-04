@@ -2,6 +2,7 @@ import React from 'react';
 import './ChefCards.css'
 import { FaClock, FaFireAlt, FaThumbsUp } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import LazyLoad from 'react-lazy-load';
 
 const ChefCards = ({ chef }) => {
 
@@ -13,7 +14,10 @@ const ChefCards = ({ chef }) => {
         <>
             <div className="col">
                 <div className="card text-center">
-                    <img src={chef_picture} className="card-img-top img-fluid chef_picture" alt="..." />
+                    <LazyLoad height={762} >
+                        <img src={chef_picture} className="card-img-top img-fluid chef_picture" alt="image" />
+                    </LazyLoad>
+
                     <div className="card-body">
                         <h4 className="card-title fw-bold">Name: {chef_name}</h4>
                         <h5>Experience: {years_of_experience} years &nbsp; {<FaClock></FaClock>}</h5>

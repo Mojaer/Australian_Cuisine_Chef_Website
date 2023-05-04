@@ -5,6 +5,7 @@ import { chefsContext } from '../../../ChefProvider/ChefProvider';
 import { CardGroup, Container, Spinner } from 'react-bootstrap';
 import './ChefRecipes.css'
 import RecipeCard from '../RecipeCard/RecipeCard';
+import LazyLoad from 'react-lazy-load';
 
 const ChefRecipes = () => {
 
@@ -36,8 +37,9 @@ const ChefRecipes = () => {
             <section className='chef-banner'>
                 <div className='chef-background py-4'>
                     <Container className='d-md-flex justify-content-around align-items-center text-md-start text-center chef-container'>
-
-                        <img src={chef_picture} className="chef_picture" alt="chef picture" />
+                        <LazyLoad >
+                            <img src={chef_picture} className="chef_picture rounded" alt="chef picture" />
+                        </LazyLoad>
                         <div className="chef-details text-light">
                             <h4 className="card-title fw-bold mb-2">Name: {chef_name}</h4>
                             <h5>Experience: {years_of_experience} years &nbsp; {<FaClock></FaClock>}</h5>
