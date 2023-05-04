@@ -8,7 +8,7 @@ const ChefProvider = ({ children }) => {
 
     useEffect(() => {
         const collectChef = async () => {
-            const res = await fetch('http://localhost:4000/')
+            const res = await fetch('https://australian-cuisine-server-mojaer.vercel.app/')
             const data = await res.json()
             setChefs(data)
         }

@@ -7,6 +7,14 @@ import ChefCards from '../ChefCards/ChefCards';
 const Home = () => {
     const chefs = useContext(chefsContext)
 
+    if (!chefs) {
+        <div className='text-center'>
+            <Spinner animation="border" role="status" style={{ width: "4rem", height: "4rem" }}>
+                <span className="visually-hidden mx-auto">Loading...</span>
+            </Spinner>
+        </div>
+    }
+
     // console.log(chefs)
     return (
         <>

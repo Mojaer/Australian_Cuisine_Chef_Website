@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { FaClock, FaFireAlt, FaThumbsUp } from 'react-icons/fa';
 import { useLoaderData } from 'react-router-dom';
 import { chefsContext } from '../../../ChefProvider/ChefProvider';
-import { Container, Spinner } from 'react-bootstrap';
+import { CardGroup, Container, Spinner } from 'react-bootstrap';
 import './ChefRecipes.css'
 import RecipeCard from '../RecipeCard/RecipeCard';
 
@@ -54,12 +54,13 @@ const ChefRecipes = () => {
             </section>
 
             <Container className=' my-5'>
-                <h4 className='fw-bold text-center'>We Have Experienced Chefs</h4>
-                <div className="row row-cols-1 row-cols-md-3 g-4 my-3">
+                <h4 className='fw-bold text-center my-5'>Best Recipes of {chef_name}</h4>
+                <CardGroup>
                     {
                         chefRecipes.map(chefRecipe => <RecipeCard recipe={chefRecipe} key={chefRecipe.recipe_id}></RecipeCard>)
                     }
-                </div>
+                </CardGroup>
+
             </Container>
         </>
     );
