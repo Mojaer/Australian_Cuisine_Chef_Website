@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Button, Container, Form } from 'react-bootstrap';
+import { Button, Container, Form, Spinner } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { authContext } from '../../AuhProvider/AuthProvider';
 
@@ -8,9 +8,16 @@ const RegistrationPage = () => {
     const { register, user, updateUser } = useContext(authContext)
     const [error, setError] = useState('')
 
-    if (user) {
-        console.log(user)
+    if (!user) {
+        <div className='text-center'>
+            <Spinner animation="border" role="status" style={{ width: "4rem", height: "4rem" }}>
+                <span className="visually-hidden mx-auto">Loading...</span>
+            </Spinner>
+        </div>
     }
+    // console.log(null)
+
+
 
 
 
@@ -24,7 +31,7 @@ const RegistrationPage = () => {
         const url = form.url.value
         // console.log(name, url)
         register(email, password)
-            .catch(error => setError('Insert more than 6 character'))
+            .catch(error => setError(error.message))
 
         updateUser(name, url, email)
         // .catch(alert => alert(alert.message))

@@ -1,12 +1,12 @@
 import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyCusuPSsHbqfbokByYfl4bdENSJ_kGqvaU",
-    authDomain: "australian-cuisine.firebaseapp.com",
-    projectId: "australian-cuisine",
-    storageBucket: "australian-cuisine.appspot.com",
-    messagingSenderId: "1002741773422",
-    appId: "1:1002741773422:web:ded94bf5ece0edf72fa27f"
+    apiKey: import.meta.env.VITE_apiKey,
+    authDomain: import.meta.env.VITE_authDomain,
+    projectId: import.meta.env.VITE_projectId,
+    storageBucket: import.meta.env.VITE_storageBucket,
+    messagingSenderId: import.meta.env.VITE_messagingSenderId,
+    appId: import.meta.env.VITE_appId
 };
 
 
