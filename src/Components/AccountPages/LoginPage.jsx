@@ -1,38 +1,49 @@
 import React, { useContext, useState } from 'react';
 import { Button, Container, Form } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import { FaGithub, FaGoogle } from 'react-icons/fa'
 import { authContext } from '../../AuhProvider/AuthProvider';
+
 
 
 const LoginPage = () => {
 
     const { login, loginWithGoogle, loginWithGithub } = useContext(authContext)
+    const navigate = useNavigate();
     const [error, setError] = useState('')
+
 
     const handleLogin = (event) => {
         event.preventDefault();
-
+        setError('')
         const form = event.target
         const email = form.email.value;
         const password = form.password.value
 
         login(email, password)
+            .then(() => navigate('/'))
             .catch(error => setError(error.message))
+
+
         form.reset()
 
     }
 
     const handleGoogleLogin = () => {
         loginWithGoogle()
-            .catch(error => alert(error.message))
+            .then(() => navigate('/'))
+            .catch(error => setError(error.message))
+
 
 
     }
 
     const handleGithubLogin = () => {
         loginWithGithub()
-            .catch(error => alert(error.message, 'login with different account'))
+            .then(() => navigate('/'))
+            .catch(error => setError(`${error.message} Please login with different GItHub account`))
+
+
     }
 
     return (

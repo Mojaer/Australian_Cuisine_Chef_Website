@@ -12,7 +12,7 @@ const AuthProvider = ({ children }) => {
 
 
     // to register New account and add the name and photo url
-    const register = (email, password) => {
+    const register = (email, password, name, url) => {
         setLoading(true)
         return createUserWithEmailAndPassword(auth, email, password);
     }

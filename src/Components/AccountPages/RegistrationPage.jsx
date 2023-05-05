@@ -19,7 +19,7 @@ const RegistrationPage = () => {
 
     const handleRegistration = (event) => {
         event.preventDefault();
-
+        setError('')
         const form = event.target
         const email = form.email.value;
         const password = form.password.value
@@ -32,16 +32,13 @@ const RegistrationPage = () => {
         }
 
         else {
-            register(email, password)
-                .then(() => setError(''))
+            register(email, password, name, url)
+                .then(() => updateUser(name, url, email))
                 .catch(error => setError(error.message))
-            updateUser(name, url, email)
+
             // .catch(alert => alert(alert.message))
             form.reset()
-
-
         }
-
     }
 
     return (

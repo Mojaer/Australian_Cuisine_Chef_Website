@@ -1,0 +1,12 @@
+.Grid {
+    background: wheat
+}
+
+.col-md-5>h4 {
+    font-weight: bolder;
+    color: darkblue;
+}
+
+.col-md-5>p {
+    font-weight: bold;
+}
