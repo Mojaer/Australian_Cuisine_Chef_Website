@@ -14,7 +14,7 @@ const ChefCards = ({ chef }) => {
         <>
             <div className="col">
                 <div className="card text-center">
-                    <LazyLoad height={762} >
+                    <LazyLoad  >
                         <img src={chef_picture} className="card-img-top img-fluid chef_picture" alt="image" />
                     </LazyLoad>
 

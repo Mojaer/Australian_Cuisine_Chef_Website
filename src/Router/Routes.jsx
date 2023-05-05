@@ -6,6 +6,7 @@ import RegistrationPage from "../Components/AccountPages/RegistrationPage";
 import AccountMain from "../Components/AccountPages/AccountMain";
 import Home from "../Components/Pages/Home/Home";
 import ChefRecipes from "../Components/Pages/ChefRecipes/ChefRecipes";
+import PrivateRoute from "../AuhProvider/PrivateRoute";
 
 
 
@@ -21,7 +22,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: "/chefs/recipe/:id",
-                element: <ChefRecipes></ChefRecipes>,
+                element: <PrivateRoute><ChefRecipes></ChefRecipes></PrivateRoute>,
                 loader: ({ params }) => fetch(`https://australian-cuisine-server-mojaer.vercel.app/chefs/recipe/${params.id}`)
 
             },

@@ -19,17 +19,20 @@ const LoginPage = () => {
 
         login(email, password)
             .catch(error => setError(error.message))
+        form.reset()
 
     }
 
     const handleGoogleLogin = () => {
         loginWithGoogle()
             .catch(error => alert(error.message))
+
+
     }
 
     const handleGithubLogin = () => {
         loginWithGithub()
-            .catch(error => alert(error.message))
+            .catch(error => alert(error.message, 'login with different account'))
     }
 
     return (
@@ -48,6 +51,7 @@ const LoginPage = () => {
 
                 </Form.Group>
                 <small className='text-danger'>{error}</small>
+                <br />
                 <Button variant="success" type="submit" className='fw-bold'>
                     Login
                 </Button>

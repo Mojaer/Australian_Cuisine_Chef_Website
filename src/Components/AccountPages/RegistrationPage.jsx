@@ -33,14 +33,14 @@ const RegistrationPage = () => {
 
         else {
             register(email, password)
+                .then(() => setError(''))
                 .catch(error => setError(error.message))
             updateUser(name, url, email)
             // .catch(alert => alert(alert.message))
+            form.reset()
+
 
         }
-
-
-
 
     }
 
@@ -63,6 +63,7 @@ const RegistrationPage = () => {
                     <Form.Control type="password" name='password' placeholder="Password" required />
                     <small className='text-danger'>{error} </small>
                 </Form.Group>
+                <br />
                 <Form.Group className="mb-3" >
                     <Form.Label>Photo URL</Form.Label>
                     <Form.Control type="text" name='url' placeholder="Enter your photo Url" />

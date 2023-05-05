@@ -1,10 +1,10 @@
 import React from 'react';
-import './AwardWinning.css'
+import './TrainingCenter.css'
 import { Container } from 'react-bootstrap';
 import { ScaleLoader } from 'react-spinners';
 import { BsTrophyFill } from "react-icons/bs";
 
-const AwardWinning = () => {
+const TrainingCenter = () => {
     return (
         <div className='extra1 '>
             <div className='extra1-banner py-5'>
@@ -38,4 +38,4 @@ const AwardWinning = () => {
     );
 };
 
-export default AwardWinning;
+export default TrainingCenter;

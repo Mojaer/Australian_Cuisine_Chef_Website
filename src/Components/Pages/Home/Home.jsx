@@ -4,7 +4,8 @@ import { Container } from 'react-bootstrap';
 import './Home.css'
 import ChefCards from '../ChefCards/ChefCards';
 import Extracomponents2 from '../../../ExtraComponents/Extracomponents2/Extracomponents2';
-import AwardWinning from '../../../ExtraComponents/ExtraComponents1/AwardWinning';
+import TrainingCenter from '../../../ExtraComponents/TrainigCenter/TrainingCenter';
+
 
 
 const Home = () => {
@@ -50,7 +51,7 @@ const Home = () => {
                 </Extracomponents2>
             </section>
             <section>
-                <AwardWinning></AwardWinning>
+                <TrainingCenter></TrainingCenter>
             </section>
 
         </>

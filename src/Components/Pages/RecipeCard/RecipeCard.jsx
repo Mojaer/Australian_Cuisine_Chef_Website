@@ -37,12 +37,12 @@ const RecipeCard = ({ recipe }) => {
     return (
         <>
             <Card className='recipe_card'>
-                <LazyLoad height={762}>
+                <LazyLoad >
                     <Card.Img variant="top" src={recipe_photo} className='recipe_photo' />
                 </LazyLoad>
-                <Card.Body >
+                <div className='card-body ' >
                     <Card.Title className='fw-bold'>{recipe_name}</Card.Title>
-                    <Card.Text>
+                    <div className='card-text'>
                         <strong>Ingredients : </strong>
                         {
                             <ol >
@@ -51,14 +51,14 @@ const RecipeCard = ({ recipe }) => {
                                 }
                             </ol>
                         }
-                    </Card.Text>
-                    <Card.Text>
+                    </div>
+                    <div className='card-text'>
                         <strong>Cooking Method : </strong>
                         {
                             cooking_method
                         }
-                    </Card.Text>
-                    <Card.Text>
+                    </div>
+                    <div className='card-text'>
                         <strong>Rating : {rating} </strong>
                         {
                             <Rating
@@ -68,8 +68,8 @@ const RecipeCard = ({ recipe }) => {
                             />
                         }
 
-                    </Card.Text>
-                </Card.Body>
+                    </div>
+                </div>
 
                 <Button variant='success' onClick={handleFavorite} disabled={favorite}>Favorite button</Button>
                 <ToastContainer
