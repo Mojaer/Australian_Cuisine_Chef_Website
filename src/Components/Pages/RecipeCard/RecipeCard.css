@@ -1,13 +1,13 @@
 .recipe_photo {
-    height: 16rem;
+    height: 13rem;
 
 }
 
 .recipe_card {
     padding: .7rem;
     height: 50rem;
-
 }
+
 
 .LazyLoad {
     opacity: 0;

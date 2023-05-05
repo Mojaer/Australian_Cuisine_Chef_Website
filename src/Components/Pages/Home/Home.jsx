@@ -3,8 +3,8 @@ import { chefsContext } from '../../../ChefProvider/ChefProvider';
 import { Container } from 'react-bootstrap';
 import './Home.css'
 import ChefCards from '../ChefCards/ChefCards';
-import Extracomponents2 from '../../../ExtraComponents/Extracomponents2/Extracomponents2';
 import TrainingCenter from '../../../ExtraComponents/TrainigCenter/TrainingCenter';
+import FeedbackRating from '../../../ExtraComponents/Extracomponents2/FeedbackRating';
 
 
 
@@ -33,9 +33,9 @@ const Home = () => {
                 </div>
             </section>
 
-            <section>
-                <Container className=' my-5'>
-                    <h4 className='fw-bold text-center'>We Have Experienced Chefs</h4>
+            <section className='chefCard_banner'>
+                <Container className=' py-5'>
+                    <h4 className='fw-bold text-center mb-4 text-light'>We Have Experienced Chefs</h4>
                     <div className="row row-cols-1 row-cols-md-3 g-4 my-3">
 
                         {
@@ -46,9 +46,7 @@ const Home = () => {
                 </Container>
             </section>
             <section>
-                <Extracomponents2>
-
-                </Extracomponents2>
+                <FeedbackRating></FeedbackRating>
             </section>
             <section>
                 <TrainingCenter></TrainingCenter>

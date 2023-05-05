@@ -15,6 +15,11 @@
     background-color: rgba(0, 0, 0, 0.582);
 }
 
+.chefRecipe_background {
+    background-color: #0e1317b9;
+}
+
+
 @media (max-width: 768px) {
     .chef-container>.chef_picture {
         width: 70%;

@@ -3,8 +3,8 @@ import './Footer.css'
 import { FaFacebook, FaInstagram } from 'react-icons/fa';
 const Footer = () => {
     return (
-        <div className='footer py-4'>
-            <footer>
+        <div className='footer py-5'>
+            <footer >
                 <div className="container ">
                     <div className="row">
                         <div className="col-md-4">

@@ -1,6 +1,6 @@
 .active {
     background-color: red !important;
-    color: black !important;
+    color: rgb(245, 238, 238) !important;
 }
 
 .user-image {

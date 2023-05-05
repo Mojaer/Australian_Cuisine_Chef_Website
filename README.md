@@ -12,4 +12,7 @@ The Website is named as Australian cuisine. this website reflects following feat
 - In the recipe section details of all chefs and their best recipes can found and added as favorite dish
 - This website is secure because for login and registration Firebase authentication is used.
 
-* In the Blog side the is some acknowledgement of react related questions
+* lazy load is used for pictures and spinner is used when data is loaded from.
+
+* In the Blog side there is some acknowledgement of react related questions
+* Here for design Bootstrap framework is used to create different components

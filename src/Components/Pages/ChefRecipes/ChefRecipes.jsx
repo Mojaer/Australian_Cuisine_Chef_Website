@@ -55,15 +55,19 @@ const ChefRecipes = () => {
                 </div>
             </section>
 
-            <Container className=' my-5'>
-                <h4 className='fw-bold text-center my-5'>Best Recipes of {chef_name}</h4>
-                <CardGroup>
-                    {
-                        chefRecipes.map(chefRecipe => <RecipeCard recipe={chefRecipe} key={chefRecipe.recipe_id}></RecipeCard>)
-                    }
-                </CardGroup>
+            <section className='chefRecipe_background'>
+                <Container className=' py-4 '>
+                    <h4 className='fw-bold text-center my-4 text-light '>Best Recipes of {chef_name}</h4>
+                    <CardGroup>
+                        {
+                            chefRecipes.map(chefRecipe => <RecipeCard recipe={chefRecipe} key={chefRecipe.recipe_id}></RecipeCard>)
+                        }
+                    </CardGroup>
 
-            </Container>
+                </Container>
+            </section>
+
+
         </>
     );
 };

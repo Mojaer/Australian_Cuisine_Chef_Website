@@ -22,7 +22,7 @@ const LoginPage = () => {
 
         login(email, password)
             .then(() => navigate('/'))
-            .catch(error => setError(error.message))
+            .catch(error => setError(`${error.message}. please provide correct email and password`))
 
 
         form.reset()
@@ -61,7 +61,7 @@ const LoginPage = () => {
                     <Form.Control type="password" name='password' placeholder="Password" required />
 
                 </Form.Group>
-                <small className='text-danger'>{error}</small>
+                <small className='text-danger fw-bolder '>{error}</small>
                 <br />
                 <Button variant="success" type="submit" className='fw-bold'>
                     Login

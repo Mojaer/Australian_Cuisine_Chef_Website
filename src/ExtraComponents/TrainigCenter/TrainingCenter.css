@@ -5,14 +5,14 @@
 }
 
 .extra1 {
-    background-image: url('/masterchef.jpg');
+    background-image: url('/masterchef.jpeg');
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
 
 .extra1-banner {
-    background-color: rgba(0, 0, 0, 0.582);
+    background-color: rgba(0, 0, 0, 0.425);
     color: aliceblue;
 }
 
@@ -23,6 +23,10 @@
     transform: translate(0rem, -5rem);
     transition: transform 2s;
     width: 50%;
+    color: aliceblue;
+    padding-top: 7rem;
+    border-radius: 0px 0px 9rem 9rem;
+    border-bottom: 3px solid goldenrod;
 }
 
 .trophy {

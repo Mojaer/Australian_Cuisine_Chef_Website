@@ -37,7 +37,7 @@ const RecipeCard = ({ recipe }) => {
     return (
         <>
             <Card className='recipe_card'>
-                <LazyLoad >
+                <LazyLoad  >
                     <Card.Img variant="top" src={recipe_photo} className='recipe_photo' />
                 </LazyLoad>
                 <div className='card-body ' >
@@ -69,9 +69,11 @@ const RecipeCard = ({ recipe }) => {
                         }
 
                     </div>
-                </div>
+                    <div className='card-text'>
+                        <Button variant='success' className='mt-4 ' onClick={handleFavorite} disabled={favorite}>Favorite button</Button>
+                    </div>
 
-                <Button variant='success' onClick={handleFavorite} disabled={favorite}>Favorite button</Button>
+                </div>
                 <ToastContainer
                     position="top-right"
                     autoClose={1700}
