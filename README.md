@@ -16,3 +16,4 @@ The Website is named as Australian cuisine. this website reflects following feat
 
 * In the Blog side there is some acknowledgement of react related questions
 * Here for design Bootstrap framework is used to create different components
+* Private route is used to secure the components
