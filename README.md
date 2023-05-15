@@ -1,9 +1,5 @@
-# b7a10-chef-recipe-hunter-client-side-Mojaer
-
-b7a10-chef-recipe-hunter-client-side-Mojaer created by GitHub Classroom
-
-#The client side is deployed link : https://australian-cuisine.web.app/
-#The server side code in : https://github.com/Mojaer/-Autralian_Cuisine_Website_Server
+# The client side is deployed link : https://australian-cuisine.web.app/
+# The server side code in : https://github.com/Mojaer/-Autralian_Cuisine_Website_Server
 
 The Website is named as Australian cuisine. this website reflects following feature
 
